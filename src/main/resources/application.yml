@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: oauth2
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: <google-client-id>
+            client-secret: <google-client-secrete>
+
+
+  data:
+    cassandra:
+      keyspace-name: main
+      username: <cassandra-client-id>
+      password: <cassandra-password>
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+
+
+datastax.astra:
+    secure-connect-bundle: src/main/resources/secure-connect-better.zip
+
+server.port: 8081
+#astra.db:
+#    id: a9bbac6a-85b4-44bd-8f56-4289107ee9b6
+#    region: us-west1
+#    keyspace: main
+#    application.token: AstraCS:lkxYZbvfGxNffEhWqCxiZjzL:66d7b0087587ea5a761778c1fe4d5ac4fed91db4f21817d88dbec4e2641b79f4
+
